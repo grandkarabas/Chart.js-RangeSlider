@@ -1,6 +1,5 @@
 function RangeSliderChart (opts) {
 	var ranger = {
-		chartProto: new Chart(opts.chartCTX),
 		datasets: opts.chartData,
 		chartOpts: opts.chartOpts || {},
 		options: opts,
@@ -71,7 +70,7 @@ function RangeSliderChart (opts) {
 
 	}
 
-
+	ranger._create()
 
 	ranger.sliderElement
 		.addClass('range-slider')
@@ -86,6 +85,5 @@ function RangeSliderChart (opts) {
 		})
 	})
 
-	ranger._create()
 	return ranger
 }
